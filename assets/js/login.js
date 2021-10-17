@@ -9,4 +9,10 @@ $(function(){
         $('.reg-box').hide()
         $('.login-box').show()
     })
+
+    let form = layui.form
+    form.verify({
+        // 自定义一个pwd校验规则
+        pwd:[/^\S{6,12}$/,'密码必须6到12位,且不能出现空格']
+    })
 })
