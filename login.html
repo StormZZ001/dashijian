@@ -61,8 +61,8 @@
         
       </div>
       <!-- 注册的盒子 -->
-      <div class="reg-box">
-        <form class="layui-form">
+      <div class="reg-box" >
+        <form class="layui-form" id="form_reg">
           <div class="layui-form-item">
             <i class="layui-icon layui-icon-username"></i>
             <input
@@ -78,29 +78,11 @@
           </div>
           <div class="layui-form-item">
             <i class="layui-icon layui-icon-password"></i>
-            <input
-              type="password"
-              name="password"
-              lay-verify="required|pwd"
-              lay-reqText="请输入密码"
-              required
-              placeholder="请输入密码"
-              autocomplete="off"
-              class="layui-input"
-            />
+            <input type="password" name="password" placeholder="请输入密码" autocomplete="off" class="layui-input" lay-verify="required|pwd">
           </div>
           <div class="layui-form-item">
             <i class="layui-icon layui-icon-password"></i>
-            <input
-              type="password"
-              name="repassword"
-              lay-verify="required|pwd|repwd"
-              lay-reqText="请再次输入密码"
-              required
-              placeholder="请再次输入密码"
-              autocomplete="off"
-              class="layui-input"
-            />
+            <input type="password" name="repassword" placeholder="请再次输入密码" autocomplete="off" class="layui-input" lay-verify="required|pwd|repwd">
           </div>
           <div class="layui-form-item">
               <button class="layui-btn layui-btn-normal layui-btn-fluid" lay-submit lay-filter="*">
