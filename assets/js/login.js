@@ -34,6 +34,7 @@ $(function () {
     e.preventDefault();
     var username = $("#form_reg [name=username]").val();
     var password = $("#form_reg [name=password]").val();
+    var repassword = $("#form_reg [name=repassword]").val();
     //2.调用ajax的post请求
     $.post(
       "http://api-breakingnews-web.itheima.net/api/reguser",
@@ -43,9 +44,13 @@ $(function () {
       },
       function (res) {
         if (res.status !== 0) {
-          return console.log(res.message)
+          layer.msg(res.message)
+        }else{
+          layer.msg('注册成功')
+          //展示登录的盒子
+          $('#link_log').click()
         }
-        console.log("注册成功");
+        
       }
     );
   });
