@@ -12,7 +12,7 @@ $(function () {
 
   let form = layui.form;
   let layer = layui.layer;
-  let url = 'http://api-breakingnews-web.itheima.net'
+  // let url = 'http://api-breakingnews-web.itheima.net'
   form.verify({
     // 自定义了一个叫做 pwd 校验规则
     pwd: [/^[\S]{6,12}$/, "密码必须6到12位，且不能出现空格"],
@@ -37,7 +37,7 @@ $(function () {
     var password = $("#form_reg [name=password]").val();
     //2.调用ajax的post请求
     $.post(
-      url+'/api/reguser',
+      '/api/reguser',
       {
         username,
         password,
@@ -59,7 +59,7 @@ $(function () {
     //1.阻止表单的默认提交行为
     e.preventDefault()
     $.ajax({
-      url: url+'/api/login',
+      url: '/api/login',
       method:'POST',
       //快速获取表单中的数据
       data:$(this).serialize(),
@@ -71,7 +71,7 @@ $(function () {
         layer.msg('登录成功')
         // 将登录成功得到的字符串保留到localStorage中去
         localStorage.setItem('token',res.token)
-        location.href='/index.html'
+        location.href='index.html'
       }
     });
   })
