@@ -20,8 +20,9 @@
         <!-- 头部区域（可配合layui已有的水平导航） -->
         <ul class="layui-nav layui-layout-right">
           <li class="layui-nav-item">
-            <a href="javascript:;">
+            <a href="javascript:;" class="userinfo">
               <img src="http://t.cn/RCzsdCq" class="layui-nav-img" />
+              <span class="text-avatar">A</span>
               个人中心
             </a>
             <dl class="layui-nav-child">
@@ -40,6 +41,11 @@
           <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
           <!-- 使用lay-shrink实现左侧菜单互斥效果 -->
           <ul class="layui-nav layui-nav-tree" lay-shrink="all">
+            <div class="userinfo">
+              <img src="http://t.cn/RCzsdCq" class="layui-nav-img" />
+              <span class="text-avatar">A</span>
+              <span id="welcome">欢迎 ***</span>
+            </div>
             <li class="layui-nav-item layui-this">
               <a href="home/dashboard.html" target="fm">
                 <span class="iconfont icon-home"></span>
