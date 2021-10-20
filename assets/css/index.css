@@ -8,3 +8,7 @@
 .layui-icon{
     margin-right: 8px;
 }
+iframe{
+    width: 100%;
+    height: 100%;
+}
