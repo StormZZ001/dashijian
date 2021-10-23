@@ -1,6 +1,21 @@
 $(function () {  
     //调用getUserInfo函数
     getUserInfo()
+
+    var layer = layui.layer
+    //点击按钮,实现退出功能
+    $('#btn_logout').on('click',function () {  
+        //提示用户是否确认退出
+        layer.confirm('是否确认退出?',{icon:3,title:'提示'},function (index) { 
+            //1.清空本地缓存中的token
+            localStorage.removeItem('token')
+            //2.跳转到登录页面
+            location.href='login.html'
+
+            //关闭 confirm 提示框
+            layer.close(index)
+         })
+    })
 })
 
 // 定义getUserInfo函数
